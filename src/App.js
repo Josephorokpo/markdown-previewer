@@ -5,12 +5,12 @@ import './App.css';
 
 function App() {
   const [markdown, setMarkdown] = useState(`
-# Welcome to My Markdown Previewer!
+# Welcome to My Custom Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
-Here's a link to [freeCodeCamp](https://www.freecodecamp.org).
+Here's a link to [GitHub](https://www.github.com).
 
 Here's some inline code, \`<div></div>\`.
 
@@ -36,7 +36,7 @@ Here's a blockquote:
 1. And there are numbered lists too.
 1. Use just 1s if you want!
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
+![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
   `);
     
   return (
