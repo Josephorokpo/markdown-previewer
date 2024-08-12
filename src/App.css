@@ -7,18 +7,44 @@
   display: flex;
   justify-content: space-between;
   text-align: justify;
+  height: 500px; /* Set a fixed height for both the editor and preview */
+}
+
+.editor-container, .preview-container {
+  width: 48%; /* Ensure both have equal width */
+  height: 100%; /* Set the height to fill the container */
 }
 
 textarea {
-  width: 45%;
+  width: 100%; /* Take up full width within the container */
+  height: 100%; /* Ensure the textarea fills the container */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ddd;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 #preview {
-  width: 45%;
+  width: 100%; /* Take up full width within the container */
+  height: 100%; /* Ensure the preview fills the container */
   padding: 10px;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
+  overflow-y: auto; /* Add scroll if content overflows */
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 150px; /* Adjust this value as needed */
+  display: block;
+  margin: 0 auto;
 }
