@@ -5,46 +5,43 @@ import './App.css';
 
 function App() {
   const [markdown, setMarkdown] = useState(`
-# Welcome to My Custom Markdown Previewer!
+# Project Documentation
 
-## This is a sub-heading...
-### And here's some other cool stuff:
+## Introduction
+Welcome to the documentation for my Markdown Previewer! This tool lets you type and preview Markdown in real-time.
 
-Here's a link to [GitHub](https://www.github.com).
+## Features
+- **Live Preview**: See your Markdown rendered as you type.
+- **Code Highlighting**: Display code blocks with syntax highlighting.
+- **Responsive Design**: Works seamlessly across devices.
 
-Here's some inline code, \`<div></div>\`.
-
-\`\`\`
-// This is a multi-line code block:
-
-function sayHello() {
-  console.log("Hello, world!");
+### Example Code Block
+\`\`\`javascript
+function greetUser(name) {
+  return \`Hello, \${name}!\`;
 }
 \`\`\`
 
-You can also make text **bold**... or _italic_.
-Or... **_both!_**
+## Links
+- [View the project on GitHub](https://github.com/josephorokpo/random-quote-machine)
 
-Here's a blockquote:
-> To be, or not to be, that is the question.
-
-- And of course, there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
-
-1. And there are numbered lists too.
-1. Use just 1s if you want!
-
+## Images
+Here's the GitHub logo:
 ![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
   `);
-    
+
   return (
     <div className="App">
       <h1>Markdown Previewer</h1>
       <div className="container">
-        <Editor value={markdown} onChange={(e) => setMarkdown(e.target.value)} />
-        <Preview markdown={markdown} />
+        <div className="editor-container">
+          <h2>Markdown Editor</h2>
+          <Editor value={markdown} onChange={(e) => setMarkdown(e.target.value)} />
+        </div>
+        <div className="preview-container">
+          <h2>Preview</h2>
+          <Preview markdown={markdown} />
+        </div>
       </div>
     </div>
   );
